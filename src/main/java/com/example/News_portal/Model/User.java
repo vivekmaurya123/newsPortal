@@ -30,7 +30,7 @@ public class User  implements Serializable {
     private Boolean activeStatus;
 
     @OneToMany(mappedBy = "user", cascade =
-            CascadeType.ALL ,fetch = FetchType.LAZY
+            CascadeType.ALL ,fetch = FetchType.EAGER
     )
     private List<Role> roles;
 
@@ -51,7 +51,7 @@ public class User  implements Serializable {
 
     }
 
-    af34fbdc5fba0f21aa829bc03007ab147bd68b02
+
 
     public User(User user) {
         this.userId = user.getUserId();

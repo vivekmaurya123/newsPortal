@@ -20,7 +20,7 @@ public class Topic implements Serializable {
 
     @OneToMany(mappedBy = "topic", cascade = {
             CascadeType.ALL,
-    },fetch = FetchType.LAZY)
+    },fetch = FetchType.EAGER)
     private List< Hashtag > hashtags;
 
     //many to many mapping user and  topic
